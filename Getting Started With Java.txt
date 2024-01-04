@@ -1,0 +1,331 @@
+
+                                                                ************* (Week-1)***************
+
+                                                           *********Getting Started With Java****************
+
+
+Q1:   Problem statement
+Write a program to display a welcome message on the screen.
+
+Welcome Message:
+
+Welcome to Java course!
+Hello
+Ninja
+Output format:
+Print the welcome message only.
+Note:-
+You don't need to return anything. Just print the desired output.
+Constraints:
+Time Limit: 1-sec
+Constraints:
+Time Limit: 1-sec
+Sample Output 1:
+Welcome to Java course!
+Hello
+Ninja
+
+Explanation Of Sample Input 1:
+Printed the welcome message.
+
+
+
+Solution: 
+
+public class Solution {
+    public static void printDisplayMessage() {
+        // Write your code here
+        System.out.println("Welcome to Java course!");
+        System.out.println("Hello");
+        System.out.println("Ninja");
+    }
+}
+
+
+Q2: MCQ: Primitive data type 'long' is having size _______ byte(s) in Java Programming 
+Ans:  8 bytes.
+
+Q3:Which of the following data type stores longest decimal number ?
+Ans: double:
+
+Explanation: Only float and double can hold dciml number.Size of the float is 4 bytes and double is 8 bytes. So double can store bigger decimal Number:.
+
+
+Q4:Which of these values can be assigned to a boolean variable in Java?
+
+Ans:  true or false:
+
+Q5: Which of these is a valid variable name ?
+ans: var1
+
+Q6: Compiler never assigns a default value to an uninitialized local variable in Java Programming. Whether this statement is true or false ?
+
+Ans: True:
+
+Q7: What is the output of the following code if the input is : 5 10 ?
+
+Scanner s = new Scanner(System.in);
+int a = s.nextInt();
+int b = s.nextInt();
+System.out.println(a+b);
+
+Ans: 15
+
+Q10: What is the output of the following code if the input string is "Career Labs"?
+
+Scanner s = new Scanner(System.in);
+String str;
+str = s.next();
+System.out.print(str);
+
+Ans: Career
+
+Q11: What is the output of the following code if input is :
+
+10 abc def
+
+Scanner s = new Scanner(System.in);
+int a = s.nextInt();
+String str = s.next();
+System.out.print(a);
+System.out.println(str);
+
+Ans: 10abc  
+Explanation: s.nextInt() scans and returns the next token as int. s.next()return the first token as abc and after 
+             space not count another word so 10abc are ans.
+
+Q12: What is the output of the following code if input is : abc def 10
+
+Scanner s = new Scanner(System.in);
+String str = s.next();
+int a = s.nextInt();
+System.out.print(str + " " + a);
+
+Ans: InputMismatchException:
+
+Explanation:  s.next scans and returns the next token as String. A token is part of entered line that is separated from other tokens by space , tab or newline .
+              so When input line is "abc def 10". then s.next() returns the first token as String "abc" and next tries to convert the next token "def" into an int. 
+              Which gives InputMismatchException.
+
+
+
+Q13: Write a program to input a name(as a single character) and marks of three tests as m1, m2, and m3 of a student considering all the three marks have been given in integer format.
+
+Now, you need to calculate the average of the given marks and print it along with the name as mentioned in the output format section.
+
+All the test marks are in integers and hence calculate the average in integer as well. That is, you need to print the integer part of the average only and neglect the decimal part.
+
+
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints
+Marks for each student lie in the range 0 to 100 (both inclusive)
+Sample Test 1
+Input:
+R
+0 100 99 
+Output:
+R 
+66
+
+SolutionL
+
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+		char name=s.next().charAt(0);
+		int m1= s.nextInt();
+		int m2=s.nextInt();
+		int m3=s.nextInt();
+		int average=(m1+m2+m3)/3;
+		System.out.println(name);
+
+		System.out.println(average);
+		/* Your class should be named Solution.
+	 	* Read input as specified in the question.
+	 	* Print output as specified in the question.
+		*/
+
+		
+	}
+
+Q14: What is the error in this code?
+
+     byte b = 50;
+     b = b * 50;
+
+Ans:       
+
+  *operator has converted b*50 int int , which can not be converted to byte without casting.
+
+  Explanation: 
+             b is multiplied with 50 Where b is byte variable and 50 is integer. So after the multiplication
+             results comes as an integer value which is 2500. now we are trying  to assign this integer to a 
+             byte variabe, which will cause the error.
+
+
+Q15: Find the Output:
+
+public class  Solution{
+    public static void main(String [] args)  {
+        double a = 6 / 4;
+        int b  = 6 / 4;
+        double c = a + b;
+        System.out.println(c);
+    }
+}
+
+Ans: 2.0;
+
+Explanation: both the operand of / are integer.
+             6/4 its a integer = 1 ans 
+             double a = 1.0
+              int   b = 1
+             double c=  2.0
+
+so hence answer 2.0:
+
+
+Q16: = Find the Output:
+
+     public class  Solution{
+    public static void main(String [] args)  {
+        double a = 55.5;
+        int b = 55;
+        a = a % 10;
+        b = b % 10;
+        System.out.println(a + " "  + b);
+      }
+ }
+
+Ans 5.5 5
+
+Explanatin:  
+            % operator give us remainder:
+            So a%10 will give us 5.5 and b%10 will give us 5
+
+So hence answer is 5.5 5.
+
+
+Q17:  Find the Output:
+
+    public class  Solution {
+    public static void main(String [] args)  {
+        int var1 = 5;
+        int var2 = 6;
+        System.out.print(var1 > var2);
+    }
+}
+
+
+Ans: false:
+
+Q18:Problem:
+
+   Take the principal amount, rate of interest, and the time period as input and calculate the Simple Interest.
+
+   Note: Print the answer as integer value.
+
+   Detailed explanation ( Input/output format, Notes, Images )
+   Sample Input 1:
+   2000
+   2.2
+   4
+   Sample Output 1:
+   176
+   Explanation:
+   principal=2000,rate=2.2 and time=4.
+  Simple interest = (Principal*rate*time) /100
+  Hence answer is (2000*2.2*4)/100 = 176
+
+
+Solution:  
+
+    import java.util.* ;
+    import java.io.*; 
+    class Solution {
+	
+	public static void main(String args[]) {
+		
+		// Write code here
+
+        Scanner sc = new Scanner (System.in);
+        int p = sc.nextInt();
+        double  r = sc.nextDouble();
+        int t = sc.nextInt();
+
+        int si =(int) (p*r*t)/100;
+
+        System.out.println(si);
+		
+	}
+}
+
+
+
+Q19: You are given a rectangle in a plane whose sides are parallel to the axes. The coordinates of one of its diagonals are provided to you. You have to print the total area of the rectangle.
+
+     The coordinates of the rectangle are provided as four integral values: x1, y1, x2, y2. It is given that x1 < x2 and y1 < y2.
+
+
+
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints:
+1 <= x1 <= 10
+1 <= y1 <= 10
+1 <= x2 <= 10
+1 <= y2 <= 10 
+Time Limit: 1 second
+Output format:
+The first and only line of output contains the result.  
+Sample Input:
+1
+1
+3
+3
+Sample Output:
+4
+Explanation:
+The given coordinates of the diagonal are (x1,y1) = (1,1) and (x2,y2) = (3, 3). 
+The area of the rectangle can then easily be calculated as: 
+area of rectangle = (x2-x1)*(y2-y1)
+(3 – 1) * ( 3 – 1) = 2 * 2 = 4 
+
+
+Solution:
+
+   import java.util.*;
+
+    public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+   Scanner sc = new Scanner(System.in);
+   int mul=1;
+  int n = sc.nextInt();
+  int c = sc.nextInt();
+  int sum=0;
+
+   if(c==1){
+	for(int i=1; i<=n; i++){
+		sum=sum+i;
+	}
+	System.out.print(sum);
+   }
+  else if(c==2){
+	for(int j=1; j<=n; j++){
+		mul=mul*j;
+	}
+	System.out.print(mul);
+  }
+  else{
+	System.out.print(-1);
+  }
+ 
+  }
+  }
+
+
+
